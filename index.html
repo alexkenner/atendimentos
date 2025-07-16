@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atendimentos NH3</title>
+  <title>Painel de atendimentos</title>
 
   <link
   rel="stylesheet"
@@ -136,11 +136,6 @@ input[type=number] {
   });
 </script>
 
-
-
-
- 
-
 <div class="fixed top-4 right-4 group z-50">
   <!-- Botão engrenagem -->
   <button
@@ -217,13 +212,14 @@ input[type=number] {
     </div>
 
     <!-- Fechar modal -->
-    <button
+  <button
       id="btn-close"
-      class="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+      class="absolute top-1 right-3 text-2xl text-gray-500 hover:text-gray-700"
       aria-label="Fechar"
     >
       &times;
     </button>
+
   </div>
 </div>
 
@@ -298,12 +294,12 @@ input[type=number] {
 
     // Aplica a nova cor e salva no localStorage
     body.classList.add(corClasse);
-    localStorage.setItem('corFundo', corClasse);
+    localStorage.setItem('BackgroundColor', corClasse);
   }
 
   // Aplica a cor salva ao carregar a página
   window.addEventListener("DOMContentLoaded", () => {
-    const corSalva = localStorage.getItem('corFundo');
+    const corSalva = localStorage.getItem('BackgroundColor');
     if (corSalva) {
       document.body.classList.add(corSalva);
     }
@@ -315,130 +311,130 @@ input[type=number] {
     <div id="formulario" class="space-y-4 mt-12">
       <!-- Campos numéricos -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center text-center">
           <label>Faturas recebidas:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
 
         </div>
         <div class="flex justify-between items-center">
           <label>Adesão:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Troca de Titularidade:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Suspenssão do contrato:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Retorno de suspenssão:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Cancelamento:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Alteração de plano:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Alteração de vencimento:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Impressão de boletos:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Atendimento cliente retido:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Cobrança de inadimplentes:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Contestação de Fatura:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Indique um amigo:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Confirmação de Pagamento:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Faturar Comodato:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Regularização:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Liberação por confiança:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Cadastro de equipamentos na planilha:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Análise equipamento substituído:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Envio de código pix:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Solicitação Aplicativos Kasatech (App's)</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Criação de usuário app kasatech:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Taxa mudança de endereço:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Outras questões financeiras:</label>
-          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
         <div class="flex justify-between items-center">
           <label>Pagamento invertido:</label>
-         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-left shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+         <input type="number" value="0" class="input-style w-24 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-center shadow-inner focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 />
         </div>
       </div>
@@ -456,7 +452,7 @@ input[type=number] {
 
       <!-- Limpeza -->
       <div class="mt-4">
-        <label class="block font-medium text-gray-700 mb-1">Limpeza da Loja:</label>
+        <label class="block font-medium text-gray-700 mb-1">Realizou a limpeza da Loja?</label>
         <label class="mr-4"><input type="radio" name="limpeza" value="Sim" checked /> Sim</label>
         <label><input type="radio" name="limpeza" value="Não" /> Não</label>
       </div>
@@ -492,56 +488,71 @@ input[type=number] {
 
   <!-- Modal -->
   <div id="changelogModal" 
-     class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden"
-     style="height:100vh; width:100vw; top:0; left:0;">
-    <div class="bg-white w-full max-w-2xl mx-auto rounded-xl shadow-lg p-6 relative text-left">
+       class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden"
+       style="height:100vh; width:100vw; top:0; left:0;">
+    <div class="bg-white w-full max-w-2xl mx-auto rounded-xl shadow-lg p-6 relative text-left max-h-[80vh] overflow-hidden">
       <h2 class="text-lg font-semibold text-gray-800 border-b pb-3 mb-4">Changelog</h2>
       
-      <div class="max-h-96 overflow-y-auto pr-2 text-sm text-gray-700 space-y-6">
-  <!-- Versão 1.1 -->
-  <div>
-    <div class="flex justify-between items-center">
-      <strong class="text-base text-gray-800">Versão 1.1</strong>
-      <span class="text-xs text-gray-400">16/07/2025</span>
-    </div>
-    <ul class="list-disc pl-5 mt-2 space-y-1">
-      <li>Adicionado changelog com modal profissional</li>
-      <li>Reestilização do rodapé com versão clicável</li>
-      <li>Melhoria na responsividade do formulário</li>
-      <li>Ajuste na centralização de elementos visuais</li>
-    </ul>
-  </div>
+      <div class="max-h-[60vh] overflow-y-auto pr-2 text-sm text-gray-700 space-y-6">
+        
+        <!-- Versão 1.1 -->
+        <div>
+          <div class="flex justify-between items-center">
+            <strong class="text-base text-gray-800">Versão 1.1</strong>
+            <span class="text-xs text-gray-400">16/07/2025</span>
+          </div>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Adicionado changelog com modal profissional</li>
+            <li>Reestilização do rodapé com versão clicável</li>
+            <li>Melhoria na responsividade do formulário</li>
+            <li>Ajuste na centralização de elementos visuais</li>
+            <li>Correções menores de layout e usabilidade.</li>
+          </ul>
+        </div>
 
-  <!-- Versão 1.0 -->
-  <div>
-    <div class="flex justify-between items-center">
-      <strong class="text-base text-gray-800">Versão 1.0</strong>
-      <span class="text-xs text-gray-400">14/07/2025</span>
-    </div>
-    <ul class="list-disc pl-5 mt-2 space-y-1">
-      <li>Splash screen com título e barra de carregamento animada</li>
-      <li>Formulário com campos organizados e responsivos</li>
-      <li>Estilo moderno com Tailwind CSS e fonte DM Sans</li>
-      <li>Persistência de dados com localStorage</li>
-      <li>Botões de ação: zerar e copiar dados</li>
-      <li>Exportação automática em formato .txt</li>
-      <li>Toast de feedback ao copiar</li>
-    </ul>
-  </div>
-</div>
+        <!-- Versão 1.0 -->
+        <div>
+          <div class="flex justify-between items-center">
+            <strong class="text-base text-gray-800">Versão 1.0</strong>
+            <span class="text-xs text-gray-400">14/07/2025</span>
+          </div>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Splash screen com título e barra de carregamento animada</li>
+            <li>Formulário com campos organizados e responsivos</li>
+            <li>Estilo moderno com Tailwind CSS e fonte DM Sans</li>
+            <li>Persistência de dados com localStorage</li>
+            <li>Botões de ação: zerar e copiar dados</li>
+            <li>Exportação automática em formato .txt</li>
+            <li>Toast de feedback ao copiar</li>
+          </ul>
+        </div>
+      </div>
 
+      <button onclick="toggleChangelog()" 
+    class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-3xl font-bold leading-none p-2 rounded-full transition">
+  &times;
+</button>
 
-      <button onclick="toggleChangelog()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold leading-none">&times;</button>
     </div>
   </div>
 </footer>
 
 <script>
   function toggleChangelog() {
-    const modal = document.getElementById("changelogModal");
-    modal.classList.toggle("hidden");
+  const modal = document.getElementById('changelogModal');
+  const isHidden = modal.classList.toggle('hidden');
+  
+  if (!isHidden) {
+    // Modal aberto, bloqueia scroll do body
+    document.body.classList.add('overflow-hidden');
+  } else {
+    // Modal fechado, libera scroll do body
+    document.body.classList.remove('overflow-hidden');
   }
+}
+
 </script>
+
 
 
 
