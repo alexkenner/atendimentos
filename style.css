@@ -1,0 +1,115 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.input-caixa {
+  @apply border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200;
+}
+
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* border-radius 2px para inputs, botões, textarea e toast */
+textarea,
+button,
+#toast,
+.input-style,
+.max-w-4xl {
+  border-radius: 2px !important;
+}
+
+.loader-bar {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Efeito shimmer: faixa clara que passa suavemente da esquerda pra direita */
+.loader-shimmer {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  animation: shimmerMove 1.5s infinite;
+  border-radius: 9999px;
+}
+
+@keyframes shimmerMove {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Remover setinhas nos inputs type=number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+/* Estilos para inputs com a classe input-style */
+.input-style {
+  border: 1px solid #D1D5DB; /* border-gray-300 */
+  padding-left: 0.75rem; /* px-3 */
+  padding-right: 0.75rem;
+  padding-top: 0.25rem; /* py-1 */
+  padding-bottom: 0.25rem;
+  text-align: left;
+  outline: none;
+  border-radius: 2px; /* padronizado para 2px */
+  width: 45px; /* ajustado para um valor prático */
+  box-sizing: border-box; /* para garantir que padding não aumente largura */
+  transition: box-shadow 0.2s ease;
+}
+
+.input-style:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* foco azul */
+}
+
+.piscando {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+
+.tab-btn {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-bottom: 2px solid transparent;
+  color: #6b7280; /* cinza padrão */
+  transition: all 0.3s ease;
+}
+
+
+  
