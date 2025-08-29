@@ -252,6 +252,7 @@ window.addEventListener("DOMContentLoaded", () => {
     "Impressão de boletos",
     "Atendimento cliente retido",
     "Cobrança de inadimplentes",
+    "Cancelamento Por Inadimplência:",
     "Suporte",
     "Contestação de Fatura",
     "Indique um amigo",
@@ -975,5 +976,6 @@ function toggleChangelog() {
       toggleChangelog();
     }
   });
+
 
   
